@@ -3,21 +3,18 @@
 
 int main()
 {
-    double num1, num2;
+    const double PI = 3.142857143;
+    double area;
+    double radius;
 
-    printf("Provide two numbers: ");
-    scanf("%lf %lf", &num1, &num2);
+    printf("Provide Radius: ");
 
-    printf("number1: %.1lf\n", num1);
-    printf("number2: %.1lf\n", num2);
+   scanf("%lf", &radius);
 
-    printf("operations\n");
+    area = PI * radius * radius;
 
-    printf("Sum: %.1lf\n", num1 + num2);
-    printf("Difference: %.1lf\n", num1 - num2);
-    printf("Product: %.1lf\n", num1 * num2);
-    printf("Division: %.1lf\n", num1 / num2);
-    printf("Modulus: %.1lf\n", num1 % num2);
 
+    printf("Radius: %lf", radius);
+    printf("\nArea: %lf", area);
     return 0;
 }
