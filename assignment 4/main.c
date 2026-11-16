@@ -1,23 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 int main()
 {
-    int arr[6][4] = {
-        {1,  2,  3,  4},
-        {5,  6,  7,  8},
-        {9, 10, 11, 12},
-        {13, 14, 15, 16},
-        {17, 18, 19, 20},
-        {21, 22, 23, 24}
-    };
+    int arr[3] = {45, 25, 21};
+    int i;
+    int max = arr[0];
+    int min = arr[0];
 
-    for (int row = 0; row < 6; row++) {
-        for (int column = 0; column < 4; column++) {
-            printf("%d ", arr[row][column]);
+    for (i = 1; i < 3; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
         }
-        printf("\n");
+        if (arr[i] < min) {
+            min = arr[i];
+        }
     }
+
+    printf("Maximum: %d\n", max);
+    printf("Minimum: %d\n", min);
 
     return 0;
 }
